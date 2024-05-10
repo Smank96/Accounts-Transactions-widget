@@ -18,11 +18,14 @@ def main():
                               remitter=value.get('from')
                               )
 
+        # форматирование даты.
+        Operation.formate_date(operation)
+
         # маскировка счета/карты получателя.
         operation.destination = mask_number(str(operation.destination))
-        # маскировка счета/карты отправителя, если поле не пустое.
-        if operation.remitter:
-            operation.remitter = mask_number(str(operation.remitter))
+
+        # маскировка счета/карты отправителя.
+        operation.remitter = mask_number(str(operation.remitter))
 
         # добавление экземпляра класса Operation в список.
         operations.append(operation)
