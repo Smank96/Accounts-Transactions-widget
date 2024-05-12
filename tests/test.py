@@ -1,5 +1,5 @@
-from utils import mask_account_number, mask_card_number, delete_canceled_operations, sort_list_by_date, mask_number
-from Operation import Operation
+from src.utils import mask_account_number, mask_card_number, delete_canceled_operations, sort_list_by_date, mask_number
+from src.Operation import Operation
 
 
 def test_mask_account_number():
