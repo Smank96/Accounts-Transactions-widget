@@ -7,7 +7,7 @@ def load_data() -> list[dict]:
     Возвращает список операций из файла json.
     """
 
-    with open("operations.json", "r", encoding="utf-8") as file:
+    with open("../data/operations.json", "r", encoding="utf-8") as file:
         operations = json.load(file)
     return operations
 
